@@ -1,13 +1,107 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Hello There!</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-      <h1 class="title">Hello There!</h1>
-      <p>Glad to see you at: </p>
-      <p id="currentTime"></p>
-      <script src="script.js"></script>
-  </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Opening Page – EE Fundamentals</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #ffffff;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        header img {
+            max-width: 80%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        section img {
+            display: block;
+            margin: 20px auto;
+            max-width: 300px;
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #005bbb;
+        }
+
+        a {
+            color: #0077cc;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .timestamp {
+            font-style: italic;
+            color: #666;
+        }
+    </style>
+    <script>
+        // JavaScript to show the current time
+        window.onload = function () {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString();
+            document.getElementById("current-time").textContent = timeString;
+        }
+    </script>
+</head>
+<body>
+
+    <header>
+        <h1>Helping You Learn Your ABCs for EE’s</h1>
+        <img src="device-testing-image.jpg" alt="Device Testing Image">
+    </header>
+
+    <section>
+        <h2>Who Am I?</h2>
+        <img src="your-photo.jpg" alt="Jordan's Photo">
+        <p>I’m Jordan! Glad to see you at <span id="current-time" class="timestamp"></span> (PST).</p>
+        <p>(Probably) just like you I am an EE major at San Jose State University – class of Fall ‘25. I hope to continue schooling for a Master’s and doctorate degrees; my end goal is to one day make an Analog-based computer to reduce the power usage of AI/ML/LLMs and such.</p>
+        <p>I took this over my final spring here and never have I been challenged in a way that I feel is special for a class like this. Sure, trying to understand all of the necessities of a (test) engineer role is a lot, but I never had to re-evaluate the answer of what it meant to be an Electrical Engineer that I told myself back when I first applied to SJSU back in 2022.</p>
+        <p>Going to Advantest and seeing one of my future possible workspaces really opened my eyes and I will be forever grateful for that. (Yeah sadly I had no internships up until that point).</p>
+        <p>That’s why I made this, a quick reference for you to refresh on the fundamentals (yes fundamentals) of Electrical Engineering that your employers expect from you from day one. Also, by going through this, I hope that leaves less moments where Mr. Kim scolds you for not knowing the “stuff for babies” and more time for the “extremely important stuff”.</p>
+    </section>
+
+    <section>
+        <h2>What is EE 182?</h2>
+        <p>This class is officially titled <strong>“Analog and Mixed-Signal IC Test Development”</strong>. What that ultimately means is that this class teaches you the tippy-end of a long and arduous process of creating an integrated circuit. In the labs, you’ll learn how to use automated testing equipment (ATE) to quickly measure the performance of your devices under testing (DUT).</p>
+        
+        <img src="device-process-flow.jpg" alt="Device Process Flow Diagram">
+        
+        <p><em>If you would like to know more about manufacturing these devices, I’d recommend taking EE/MatE 129.</em></p>
+        <p>Here are my final reports if you’d like to see the outcomes of this class: <a href="#">[1]</a> <a href="#">[2]</a></p>
+
+        <p>The lectures, by contrast, will focus more on signal processing topics, akin to EE 110/112. That is because knowing what kind of signal to send, transform, receive, whatever is vital for what you are supposed to test.</p>
+        <p>How do you know if your filters work if you cannot even work between time and frequency domain? How do you know if your sampling process does result in garbage? These are the things you need to know at the back of your brain before you even start your work.</p>
+        <p>In fact, intensive signal processing knowledge is what separates us from the computer engineers.</p>
+    </section>
+
+</body>
 </html>

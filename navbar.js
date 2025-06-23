@@ -3,13 +3,21 @@ document.addEventListener("DOMContentLoaded", () => {
   const navbarPath = inSubfolder ? "../navbar.html" : "navbar.html";
 
   fetch(navbarPath)
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById("navbar-container").innerHTML = data;
-      document.querySelectorAll('nav a[data-link]').forEach(a => {
+    .then(response => {
+      if (!response.ok) throw new Error("Failed to load navbar");
+      return response.text();
+    })
+    .then(html => {
+      document.getElementById("navbar-container").innerHTML = html;
+
+      // Add hrefs after inserting navbar HTML
+      document.querySelectorAll('nav a[data-link]').forEach(anchor => {
         const base = inSubfolder ? "../" : "";
-        a.setAttribute("href", base + a.getAttribute("data-link"));
+        const link = anchor.getAttribute("data-link");
+        anchor.setAttribute("href", base + link);
       });
     })
-    .catch(err => console.error("Navbar error:", err));
+    .catch(error => {
+      console.error("Navbar loading error:", error);
+    });
 });

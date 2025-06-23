@@ -36,13 +36,11 @@
     <h2>Natural Response</h2>
     <p>Occurs when no external sources are present (e.g., discharging a capacitor).</p>
     <div>\[ x(t) = x(0) e^{-t/\tau} \]</div>
-    <p>
-      where \( \tau \) is the time constant:
-      <ul>
-        <li>\( \tau = RC \) for RC circuits</li>
-        <li>\( \tau = \frac{L}{R} \) for RL circuits</li>
-      </ul>
-    </p>
+    <p>where \( \tau \) is the time constant:</p>
+    <ul>
+      <li>\( \tau = RC \) for RC circuits</li>
+      <li>\( \tau = \frac{L}{R} \) for RL circuits</li>
+    </ul>
 
     <h2>Step Response</h2>
     <p>When a source is applied at \( t = 0 \), the output approaches a final steady-state value:</p>
@@ -66,51 +64,6 @@
     <div>\[ i(t) = \frac{V_s}{R} \left( 1 - e^{-tR/L} \right) \]</div>
     <p>The inductor current starts at 0 and ramps up toward \( \frac{V_s}{R} \).</p>
   </div>
-
-  <div class="container">
-  <h1>First-Order Circuits Review</h1>
-
-  <p>First-order circuits are electrical circuits that contain only one energy storage element — either a capacitor or an inductor — along with resistors and independent sources.</p>
-
-  <h2>Types of First-Order Circuits</h2>
-  <ul>
-    <li><strong>RC Circuit</strong> – Resistor and Capacitor</li>
-    <li><strong>RL Circuit</strong> – Resistor and Inductor</li>
-  </ul>
-
-  <h2>Natural Response</h2>
-  <p>Occurs when no external sources are present (e.g., discharging a capacitor).</p>
-  <div>\\[ x(t) = x(0) e^{-t/\tau} \\]</div>
-  <p>
-    where \\( \tau \\) is the time constant:
-    <ul>
-      <li>\\( \tau = RC \\) for RC circuits</li>
-      <li>\\( \tau = \frac{L}{R} \\) for RL circuits</li>
-    </ul>
-  </p>
-
-  <h2>Step Response</h2>
-  <p>When a source is applied at \\( t = 0 \\), the output approaches a final steady-state value:</p>
-  <div>\\[ x(t) = x_{\infty} + \left( x(0) - x_{\infty} \right) e^{-t/\tau} \\]</div>
-
-  <h2>Key Points to Remember</h2>
-  <ul>
-    <li>The rate of change is exponential.</li>
-    <li>Time constant \\( \tau \\) defines how fast the circuit responds.</li>
-    <li>At \\( t = \tau \\): 63.2% of total change has occurred.</li>
-    <li>At \\( t = 5\tau \\): system is considered to be at steady state.</li>
-  </ul>
-
-  <h2>Example: RC Charging Circuit</h2>
-  <p>Given a series RC circuit connected to a DC source at \\( t = 0 \\):</p>
-  <div>\\[ V_c(t) = V_s \left( 1 - e^{-t/RC} \right) \\]</div>
-  <p>The voltage across the capacitor starts at 0 and asymptotically approaches \\( V_s \\).</p>
-
-  <h2>Example: RL Circuit with Step Input</h2>
-  <p>Given a series RL circuit with a step voltage source:</p>
-  <div>\\[ i(t) = \frac{V_s}{R} \left( 1 - e^{-tR/L} \right) \\]</div>
-  <p>The inductor current starts at 0 and ramps up toward \\( \frac{V_s}{R} \\).</p>
-</div>
 
 </body>
 </html>

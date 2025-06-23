@@ -56,6 +56,46 @@
     </ul>
   </div>
 
+  <div class="opamp-examples">
+
+  <div class="opamp-block">
+    <h3>Integrator</h3>
+    <img src="../images/integrator.png" alt="Integrator Circuit">
+    <p>Output voltage: \\[ V_{out}(t) = -\frac{1}{RC} \int_0^t V_{in}(\tau)\, d\tau \\]</p>
+  </div>
+
+  <div class="opamp-block">
+    <h3>Differentiator</h3>
+    <img src="../images/differentiator.png" alt="Differentiator Circuit">
+    <p>Output voltage: \\[ V_{out}(t) = -RC \frac{dV_{in}(t)}{dt} \\]</p>
+  </div>
+
+  <div class="opamp-block">
+    <h3>Comparator</h3>
+    <img src="../images/comparator.png" alt="Comparator Circuit">
+    <p>Ideal output: \\[ V_{out} =
+      \begin{cases}
+        V_{CC} & \text{if } V_+ > V_- \\\\
+        0      & \text{if } V_+ \leq V_-
+      \end{cases}
+    \\]</p>
+  </div>
+
+  <div class="opamp-block">
+    <h3>Low-Pass Filter</h3>
+    <img src="../images/lowpass.png" alt="Low Pass Filter">
+    <p>Transfer function: \\[ H(s) = \frac{1}{1 + sRC} \\]</p>
+  </div>
+
+  <div class="opamp-block">
+    <h3>High-Pass Filter</h3>
+    <img src="../images/highpass.png" alt="High Pass Filter">
+    <p>Transfer function: \\[ H(s) = \frac{sRC}{1 + sRC} \\]</p>
+  </div>
+
+</div>
+
+
 </body>
 </html>
 

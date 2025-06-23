@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Detect whether current page is in a subdirectory
-  const isInPagesFolder = window.location.pathname.includes("/pages/");
-  const navbarPath = isInPagesFolder ? "../navbar.html" : "navbar.html";
+  let path = window.location.pathname;
+  let navbarPath = path.includes("/pages/") ? "../navbar.html" : "navbar.html";
 
   fetch(navbarPath)
     .then(response => {
@@ -11,7 +10,5 @@ document.addEventListener("DOMContentLoaded", () => {
     .then(data => {
       document.getElementById("navbar-container").innerHTML = data;
     })
-    .catch(error => {
-      console.error("Navbar load error:", error);
-    });
+    .catch(err => console.error("Navbar error:", err));
 });

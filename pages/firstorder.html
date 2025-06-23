@@ -65,5 +65,42 @@
     <p>The inductor current starts at 0 and ramps up toward \( \frac{V_s}{R} \).</p>
   </div>
 
+  <div class="container">
+  <h1>General Solution to First-Order Circuits</h1>
+
+  <p>First-order circuits—like RC or RL circuits—are described by a first-order linear differential equation:</p>
+  <div>\\[ \frac{dx(t)}{dt} + \frac{1}{\tau} x(t) = f(t) \\]</div>
+
+  <ul>
+    <li>\\( x(t) \\) is the unknown function (voltage or current)</li>
+    <li>\\( \tau \\) is the time constant: \\( \tau = RC \\) or \\( \tau = \frac{L}{R} \\)</li>
+    <li>\\( f(t) \\) is the input (forcing function)</li>
+  </ul>
+
+  <h2>Step 1: Homogeneous Solution</h2>
+  <p>Assume \\( f(t) = 0 \\):</p>
+  <div>\\[ \frac{dx}{dt} + \frac{1}{\tau}x = 0 \\]</div>
+  <div>\\[ \frac{dx}{x} = -\frac{dt}{\tau} \\Rightarrow \ln |x| = -\frac{t}{\tau} + C \\]</div>
+  <div>\\[ x_h(t) = A e^{-t/\tau} \\]</div>
+
+  <h2>Step 2: Particular Solution</h2>
+  <p>For a constant input \\( f(t) = K \\), assume the steady-state solution:</p>
+  <div>\\[ \frac{dx}{dt} = 0 \Rightarrow \frac{1}{\tau} x = K \Rightarrow x = K\tau \\]</div>
+
+  <h2>Step 3: General Solution</h2>
+  <p>The full solution is the sum of the homogeneous and particular solutions:</p>
+  <div>\\[ x(t) = A e^{-t/\tau} + x_{\infty} \\]</div>
+  <p>Using the initial condition \\( x(0) \\), we solve for \\( A \\):</p>
+  <div>\\[ A = x(0) - x_{\infty} \\]</div>
+  <p>Final solution:</p>
+  <div>\\[ x(t) = x_{\infty} + \left( x(0) - x_{\infty} \right) e^{-t/\tau} \\]</div>
+
+  <h2>Time Constant Insight</h2>
+  <ul>
+    <li>At \\( t = \tau \\): 63.2% of the way to \\( x_{\infty} \\)</li>
+    <li>At \\( t = 5\tau \\): over 99% complete</li>
+  </ul>
+</div>
+
 </body>
 </html>
